@@ -17,4 +17,198 @@ body {
   margin: 0; /* reset */
   background-color: #000;
   overflow: hidden;
+  background-image: url('./assets/wallpaper.jpg');
+  background-size: cover;
+  overflow: hidden;
+}
+
+/* Stuff */
+
+.container {
+  position: absolute;
+  bottom: 50px;
+  left: 60px;
+}
+
+/* Logo */
+
+:root {
+  /* Variables */
+  --loading-spinner__color-grey: #efefef;
+  --loading-spinner__color-green: #7fca2a;
+  --loading-spinner__animation-length: 1.33s;
+}
+
+@keyframes logo-animation {
+  0% {
+    opacity: 1;
+  }
+  81.25% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.logo {
+  will-change: opacity;
+  animation: logo-animation var(--loading-spinner__animation-length) ease-in-out infinite;
+  filter: drop-shadow(0 3px 11px rgba(255, 255, 255, 0.33));
+}
+
+@keyframes logo-part-1-animation {
+  0% {
+    opacity: 0;
+  }
+  67.49% {
+    opacity: 0;
+  }
+  67.5% {
+    opacity: 1;
+  }
+  69.9% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+  72.49% {
+    opacity: 0;
+  }
+  72.5% {
+    opacity: 1;
+  }
+  73.74% {
+    opacity: 1;
+  }
+  73.75% {
+    opacity: 0;
+  }
+  77.49% {
+    opacity: 0;
+  }
+  77.5% {
+    opacity: 1;
+  }
+  79.9% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  81.24% {
+    opacity: 0;
+  }
+  81.25% {
+    opacity: 1;
+  }
+}
+
+@keyframes logo-part-2-animation {
+  0% {
+    clip-path: polygon(0 0, 0 0, 0 0, 0 50%);
+    opacity: 0;
+  }
+  45% {
+    clip-path: polygon(0 0, 0 0, 0 0, 0 50%);
+    opacity: 0;
+  }
+  62.5% {
+    clip-path: polygon(-50% 0%, 200% 0, 0 200%, 0 -50%);
+  }
+  72.5% {
+    opacity: 1;
+  }
+}
+
+@keyframes logo-part-3-animation {
+  0% {
+    opacity: 0;
+    clip-path: polygon(50% -50%, 150% 50%, 150% 50%, 50% -50%);
+  }
+  35% {
+    opacity: 0;
+    clip-path: polygon(50% -50%, 150% 50%, 150% 50%, 50% -50%);
+  }
+  45% {
+    clip-path: polygon(50% -50%, 150% 50%, 50% 150%, -50% 50%);
+  }
+  55% {
+    opacity: 1;
+  }
+}
+
+@keyframes logo-part-4-animation {
+  0% {
+    opacity: 0;
+    clip-path: inset(0 0 100% 0);
+  }
+  12.5% {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+  }
+  17.5% {
+    opacity: 1;
+  }
+  17.51% {
+    opacity: 0;
+  }
+  22.49% {
+    opacity: 0;
+  }
+  22.5% {
+    opacity: 1;
+  }
+  23.74% {
+    opacity: 1;
+  }
+  23.75% {
+    opacity: 0;
+  }
+  26.24% {
+    opacity: 0;
+  }
+  26.25% {
+    opacity: 1;
+  }
+  28.74% {
+    opacity: 1;
+  }
+  28.75% {
+    opacity: 0;
+  }
+  32.49% {
+    opacity: 0;
+  }
+  32.5% {
+    opacity: 1;
+  }
+}
+
+.logo-part-1 {
+  will-change: opacity;
+  fill: var(--loading-spinner__color-grey);
+  animation: logo-part-1-animation var(--loading-spinner__animation-length) ease-in-out infinite;
+}
+
+.logo-part-2 {
+  will-change: opacity, clip-path;
+  fill: var(--loading-spinner__color-grey);
+  animation: logo-part-2-animation var(--loading-spinner__animation-length) ease-in-out infinite;
+}
+
+.logo-part-3 {
+  will-change: opacity, clip-path;
+  fill: var(--loading-spinner__color-grey);
+  animation: logo-part-3-animation var(--loading-spinner__animation-length) ease-in-out infinite;
+}
+
+.logo-part-4 {
+  will-change: opacity;
+  fill: var(--loading-spinner__color-green);
+  animation: logo-part-4-animation var(--loading-spinner__animation-length) ease-in-out infinite;
 }
